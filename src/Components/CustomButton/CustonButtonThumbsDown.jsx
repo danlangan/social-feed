@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import "./Custom-Button.css"
 
-const CustomButton = (props) => {
+const CustomButtonThumbsDown = (props) => {
 
     const [buttonClass, setButtonClass] = useState('inactive');
     function handleClick(){
         if(buttonClass === "inactive") {
-            setButtonClass("active")
+            setButtonClass("active-thumbs-down")
         }
         else {setButtonClass("inactive");}
     }

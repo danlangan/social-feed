@@ -1,4 +1,5 @@
-import CustomButton from "./Components/CustomButton/CustomButton"
+import CustomButtonThumbsUp from "./Components/CustomButton/CustomButtonThumbsUp"
+import CustomButtonThumbsDown from "./Components/CustomButton/CustomButtonThumbsDown"
 
 function App() {
   return (

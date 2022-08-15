@@ -1,3 +1,11 @@
 .inactive {
     background-color: grey;
 }
+
+.active-thumbs-up {
+    background-color: green;
+}
+
+.active-thumbs-down {
+    background-color: red;
+}
