@@ -1,5 +1,7 @@
 import CustomButtonThumbsUp from "../CustomButton/CustomButtonThumbsUp";
 import CustomButtonThumbsDown from "../CustomButton/CustomButtonThumbsDown";
+import Icons from "../Icons"
+
 
 
 
@@ -13,7 +15,8 @@ const DisplayPosts = (props) => {
                     <div>
                     <h3>{entry.name}</h3>
                     <p>{entry.post}</p>
-                    <button><CustomButtonThumbsUp/></button><button><CustomButtonThumbsDown/></button>
+                    <button type="button"><CustomButtonThumbsUp/></button>
+                    <button type="button"><CustomButtonThumbsDown/></button>
                     </div>
                 );
                 })}

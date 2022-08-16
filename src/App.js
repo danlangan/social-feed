@@ -16,10 +16,9 @@ function App() {
 
   return (
     <div class="container-fluid">
-      <title>
-        <SocialFeedNavBar/>
-      </title>
       <body>
+          <SocialFeedNavBar/>
+        <br></br>
           <CreateSocialPost addNewSocialPost={addNewPost}/>
         <br></br>
           <DisplayPosts parentEntries={entries}/>

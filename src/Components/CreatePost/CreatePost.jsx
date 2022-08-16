@@ -17,13 +17,19 @@ const CreateSocialPost = (props) => {
     }
 
     return (
+        <div style={{paddingLeft:'33%', paddingRight: '33%', width:'33%', display: 'flex', flexDirection: 'column', background: ''}}>
         <form onSubmit={handleSubmit}>
             <label>Name</label>
+            <br></br>
             <input type="text" value={name} onChange={(event) => setName(event.target.value)}/>
-            <label>Post</label>
-            <input type="text" value={post} onChange={(event) => setPost(event.target.value)}/>
-            <button type="submit">Add</button>
+            <br></br>
+            <label> Create Post</label>
+            <br></br>
+            <input height="50px" type="TextBox" value={post} onChange={(event) => setPost(event.target.value)}/>
+            <br></br>
+            <button type="submit">Post</button>
         </form>
+        </div>
      );
 }
  
