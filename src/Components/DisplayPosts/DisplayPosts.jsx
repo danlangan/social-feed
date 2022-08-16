@@ -6,23 +6,19 @@ import CustomButtonThumbsDown from "../CustomButton/CustomButtonThumbsDown";
 const DisplayPosts = (props) => {
 
     return(
-        <table>
-            <thead>
-                <th>Name</th>
-                <th>Post</th>
-            </thead>
-            <tbody>
+        <div style={{paddingLeft:'33%', paddingRight: '33%', width:'33%', display: 'flex', flexDirection: 'column'}}>
+            <body>
                 {props.parentEntries.map((entry) => {
                 return (
                     <div>
-                    <tr>{entry.name}</tr>
-                    <tr>{entry.post}</tr>
+                    <h3>{entry.name}</h3>
+                    <p>{entry.post}</p>
+                    <button><CustomButtonThumbsUp/></button><button><CustomButtonThumbsDown/></button>
                     </div>
                 );
                 })}
-          <tr><CustomButtonThumbsUp/>, <CustomButtonThumbsDown/></tr>
-          </tbody>
-        </table>
+          </body>
+        </div>
     );
 }
 
