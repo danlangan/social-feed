@@ -1,4 +1,3 @@
-import React, { PureComponent } from 'react';
 import CustomButtonThumbsUp from "../CustomButton/CustomButtonThumbsUp";
 import CustomButtonThumbsDown from "../CustomButton/CustomButtonThumbsDown";
 

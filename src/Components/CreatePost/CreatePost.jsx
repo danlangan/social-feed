@@ -13,6 +13,7 @@ const CreateSocialPost = (props) => {
             post: post
         };
         console.log(newPost);
+        props.addNewSocialPost(newPost);
     }
 
     return (
