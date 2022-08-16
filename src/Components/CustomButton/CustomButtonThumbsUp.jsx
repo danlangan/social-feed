@@ -16,3 +16,5 @@ const CustomButtonThumbsUp = (props) => {
         </div>
     )
 }
+
+export default CustomButtonThumbsUp;

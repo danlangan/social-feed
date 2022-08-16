@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import CustomButtonThumbsUp from "./Components/CustomButton/CustomButtonThumbsUp"
-import CustomButtonThumbsDown from "./Components/CustomButton/CustomButtonThumbsDown"
 import DisplayPosts from "./Components/DisplayPosts/DisplayPosts"
-import CreatePost from "./Components/CreatePost/CreatePost"
+import CreateSocialPost from "./Components/CreatePost/CreatePost"
 
 function App() {
 
@@ -11,9 +9,7 @@ function App() {
     <div>
       <head><h3 style={{'margin':'1em'}}>Social<small className='text-muted'>Feed</small></h3></head>
       <body>
-        <form>
-          <CreatePost parentEntries={entries}/>
-        </form>
+          <CreateSocialPost parentEntries={entries}/>
         <br></br>
           <DisplayPosts parentEntries={entries}/>
       </body>

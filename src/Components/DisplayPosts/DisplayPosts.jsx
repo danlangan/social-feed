@@ -1,12 +1,10 @@
 import React, { PureComponent } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native'
 import CustomButtonThumbsUp from "../CustomButton/CustomButtonThumbsUp";
 import CustomButtonThumbsDown from "../CustomButton/CustomButtonThumbsDown";
 
 
 
 const DisplayPosts = (props) => {
-    const [entries, setEntries] = useState([{name: '', post: ''}])
 
     return(
         <table>
@@ -14,13 +12,19 @@ const DisplayPosts = (props) => {
                 <th>Name</th>
                 <th>Post</th>
             </thead>
+            <tbody>
                 {props.parentEntries.map((entry) => {
                 return (
+                    <div>
                     <tr>{entry.name}</tr>
                     <tr>{entry.post}</tr>
-                
-          )})};
-          <tr>{CustomButtonThumbsUp} {CustomButtonThumbsDown}</tr>
+                    </div>
+                );
+                })}
+          <tr><CustomButtonThumbsUp/>, <CustomButtonThumbsDown/></tr>
+          </tbody>
         </table>
     );
 }
+
+export default DisplayPosts;
