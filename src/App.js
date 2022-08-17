@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import DisplayPosts from "./Components/DisplayPosts/DisplayPosts"
-import CreateSocialPost from "./Components/CreatePost/CreatePost"
+import DisplayPosts from "./Components/DisplayPosts/DisplayPosts";
+import CreateSocialPost from "./Components/CreatePost/CreatePost";
 import SocialFeedNavBar from './Components/NavBar/NavBar';
 
 
@@ -13,6 +13,7 @@ function App() {
     let tempEntries = [entry, ...entries];
     setEntries(tempEntries);
   }
+
 
   return (
     <div class="container-fluid">
