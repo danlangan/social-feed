@@ -5,20 +5,20 @@ import { ReactComponent as ThumbsUp } from "../assets/Thumbs-Up.svg";
 const CustomButtonThumbsUp = (props) => {
 
     const [buttonClass, setButtonClass] = useState('inactive');
-    function handleClick(event){
+    function handleClick(){
         if(buttonClass === "inactive") {
             setButtonClass("active-thumbs-up")
         }
         else {setButtonClass("inactive");}
-        props.turnIconGreen()
     }
     return (
         <div>
             <ThumbsUp
-            buttonClass="inactive"
+            className={buttonClass}
             height="2rem"
             onClick={handleClick}
             style={{ cursor: "pointer"}}
+            width='2rem'
             />
         </div>
     )

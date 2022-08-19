@@ -1,5 +1,9 @@
 .inactive {
-    background-color: grey;
+    background-color: transparent;
+}
+
+.inactive-thumbs-down {
+    transform: scaleY(-1);
 }
 
 .active-thumbs-up {
@@ -8,4 +12,15 @@
 
 .active-thumbs-down {
     background-color: red;
+    transform: scaleY(-1);
+}
+
+.row {
+    display: table;
+    float: right;
+}
+
+.column {
+    float: left;
+    padding: 5px;
 }

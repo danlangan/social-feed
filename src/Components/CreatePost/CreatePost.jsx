@@ -17,17 +17,18 @@ const CreateSocialPost = (props) => {
     }
 
     return (
-        <div style={{paddingLeft:'33%', paddingRight: '33%', width:'33%', display: 'flex', flexDirection: 'column', background: ''}}>
-        <form onSubmit={handleSubmit}>
-            <label>Name</label>
+        <div>
+        <form onSubmit={handleSubmit} style={{paddingTop:'1.5rem', paddingLeft:'33%', paddingRight: '33%', width:'33%', display: 'flex', flexDirection: 'column'}}>
+            <div className="form-group"><label style={{paddingRight: '1rem'}}>Name</label>
+            <input style={{position:'absolute', width: '28.25%'}} 
+            className="form-control" type="text" value={name} onChange={(event) => setName(event.target.value)}/></div>
             <br></br>
-            <input type="text" value={name} onChange={(event) => setName(event.target.value)}/>
+            <div className="form-group"><label style={{paddingRight: '1rem'}}>Create Post</label>
+            <input style={{height:"8rem", position:'absolute', width: '25.5%'}} 
+            type="TextBox" value={post} onChange={(event) => setPost(event.target.value)}/></div>
             <br></br>
-            <label> Create Post</label>
-            <br></br>
-            <input height="50px" type="TextBox" value={post} onChange={(event) => setPost(event.target.value)}/>
-            <br></br>
-            <button type="submit">Post</button>
+            <button type="submit" style={{marginTop:'7.5rem', width:'11.5', float: 'right'}}>
+                Create Post</button>
         </form>
         </div>
      );

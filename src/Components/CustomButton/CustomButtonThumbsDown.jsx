@@ -4,21 +4,23 @@ import { ReactComponent as ThumbsDown } from "../assets/Thumbs-Down.svg"
 
 const CustomButtonThumbsDown = (props) => {
 
-    const [buttonClass, setButtonClass] = useState('inactive');
-    function handleClick(event){
-        if(buttonClass === "inactive") {
+    const [buttonClass, setButtonClass] = useState('inactive-thumbs-down');
+    function handleClick(){
+        if(buttonClass === "inactive-thumbs-down") {
             setButtonClass("active-thumbs-down")
+            console.log("set to active thumbs down ")
         }
-        else {setButtonClass("inactive");}
-        props.turnIconRed()
+        else {setButtonClass("inactive-thumbs-down");}
     }
     return (
         <div>
             <ThumbsDown
-            buttonClass="inactive"
+            className={buttonClass}
             height="2rem"
             onClick={handleClick}
-            style={{ cursor: "pointer"}}/>
+            style={{ cursor: "pointer"}}
+            width="2rem"
+            />
         </div>
     )
 }

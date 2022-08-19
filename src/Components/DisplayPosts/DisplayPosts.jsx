@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import CustomButtonThumbsUp from "../CustomButton/CustomButtonThumbsUp";
 import CustomButtonThumbsDown from "../CustomButton/CustomButtonThumbsDown";
 import "../CustomButton/Custom-Button.css"
@@ -6,33 +5,20 @@ import "../CustomButton/Custom-Button.css"
 
 const DisplayPosts = (props) => {
 
-    const [buttonClass, setButtonClass] = useState('inactive');
-
-    function handleClickLike() {
-      if(buttonClass === "inactive") {
-        setButtonClass("active-thumbs-up")
-    }
-    else {setButtonClass("inactive");}
-    }
-  
-    function handleClickDislike(){
-      if(buttonClass === "inactive") {
-          setButtonClass("active-thumbs-down")
-      }
-      else {setButtonClass("inactive");}
-    }
-  
-
     return(
-        <div style={{paddingLeft:'33%', paddingRight: '33%', width:'33%', display: 'flex', flexDirection: 'column'}}>
+        <div style={{paddingLeft:'25%', paddingRight: '25%', width:'50%', display: 'flex', borderTop: '2px solid grey'}}>
             <body>
                 {props.parentEntries.map((entry) => {
                 return (
-                    <div>
+                    <div style={{borderBottom: "2px solid grey", paddingBottom: "0.5rem"}}>
                     <h3>{entry.name}</h3>
                     <p>{entry.post}</p>
-                    <CustomButtonThumbsUp turnIconGreen={handleClickLike}/>
-                    <CustomButtonThumbsDown turnIconRed={handleClickDislike}/>
+                        <div className="row">
+                        <div className="column"><CustomButtonThumbsUp/></div>
+                        <div className="column"><CustomButtonThumbsDown/></div>
+                        </div>
+                        <br></br>
+                        <br></br>
                     </div>
                 );
                 })}
